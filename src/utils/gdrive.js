@@ -6,7 +6,7 @@
  */
 
 // Default client ID. Users can also configure their own under settings.
-export const DEFAULT_CLIENT_ID = "1057421376822-0lq2b8f8jkhn63u4m6ebr29o3b839vve.apps.googleusercontent.com"; // Placeholder - user can change
+export const DEFAULT_CLIENT_ID = "1086747680952-c7im0b4i966bg2ooa4rsub6ve58tofcc.apps.googleusercontent.com"; // Placeholder - user can change
 
 /**
  * Initiates the Google OAuth2 login flow.
