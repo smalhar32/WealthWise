@@ -260,7 +260,11 @@ export function SecurityScreen({
       setLastSync(syncTime);
       const isAuto = await getStorageItem("ww_gdrive_autobackup", "false");
       setAutoBackup(isAuto === "true");
-      const savedClientId = await getStorageItem("ww_gdrive_client_id", DEFAULT_CLIENT_ID);
+      let savedClientId = await getStorageItem("ww_gdrive_client_id", DEFAULT_CLIENT_ID);
+      if (savedClientId === "1057421376822-0lq2b8f8jkhn63u4m6ebr29o3b839vve.apps.googleusercontent.com") {
+        savedClientId = DEFAULT_CLIENT_ID;
+        await setStorageItem("ww_gdrive_client_id", DEFAULT_CLIENT_ID);
+      }
       setClientId(savedClientId);
     };
     loadSyncSettings();
